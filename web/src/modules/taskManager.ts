@@ -1,5 +1,5 @@
-import Task from "@/model/Task";
-import { initialTasks } from "@/utils/TaskList";
+import Task from "../model/Task";
+import { initialTasks } from "../utils/TaskList";
 
 let tasks: Task[] = [...initialTasks];
 
