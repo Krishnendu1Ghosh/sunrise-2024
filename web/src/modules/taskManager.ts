@@ -1,10 +1,10 @@
-import Task from "../model/Task";
-import { initialTasks } from "../utils/TaskList";
+import Task from "@/model/Task";
+import { initialTasks } from "@/utils/TaskList";
 
 let tasks: Task[] = [...initialTasks];
 
 export function initializeTasks() {
-    tasks.push({ id: 1, title: 'First Task', status: 'active', group: 1 });
+    tasks.push({ id: 1, title: 'First Task', description: '', persona: '', status: 'active', group: 1 });
 }
 
 export function getActiveTasks(): Task[] {
@@ -19,8 +19,8 @@ export function getAllTasks(): Task[] {
     return tasks;
 }
 
-export function completeTask(taskId: number): void {
-    const task = tasks.find(task => task.id === taskId);
+export function completeTask(taskTitle: string): void {
+    const task = tasks.find(task => task.title === taskTitle);
     if (task && task.status === 'active') {
         task.status = 'completed';
         const nextTaskGroup = task.group + 1;
@@ -31,8 +31,8 @@ export function completeTask(taskId: number): void {
     }
 }
 
-export function createTask(title: string, description: string, group: number): void {
-    const newTask: Task = { id: tasks.length + 1, title, description, status: 'pending', group };
+export function createTask(title: string, description: string, persona: string, group: number): void {
+    const newTask: Task = { id: tasks.length + 1, title, description, persona, status: 'pending', group };
     tasks.push(newTask);
 }
 
