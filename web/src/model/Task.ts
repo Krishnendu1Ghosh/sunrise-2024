@@ -1,20 +1,10 @@
+interface Task {
+  id: number;
+  title: string;
+  description: string;
+  persona: string;
+  status: 'active' | 'completed' | 'pending';
+  group: number;
+}
 
-
-export default class Task {
-    id: number;
-    title: string;
-    description: string;
-    persona: string;
-    group: number;
-    completed: boolean;//gives a boolean value
-  
-    constructor(id: number, title: string, description: string, persona: string, group: number, completed: boolean = false) {
-      this.id = id;
-      this.title = title;
-      this.description = description;
-      this.persona = persona;
-      this.group = group;
-      this.completed = completed;
-    }
-  }
-  
+export default Task;
