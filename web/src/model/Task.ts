@@ -6,7 +6,7 @@ export default class Task {
     description: string;
     persona: string;
     group: number;
-    completed: boolean;
+    completed: boolean;//gives a boolean value
   
     constructor(id: number, title: string, description: string, persona: string, group: number, completed: boolean = false) {
       this.id = id;
