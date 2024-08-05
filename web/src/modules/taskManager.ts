@@ -12,7 +12,7 @@ export function getActiveTasks(): Task[] {
 }
 
 export function getCompletedTasks(): Task[] {
-    return tasks.filter(task => task.status === 'completed'); 
+    return tasks.filter(task => task.status === 'completed');
 }
 
 export function getAllTasks(): Task[] {
